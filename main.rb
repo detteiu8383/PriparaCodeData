@@ -1,5 +1,4 @@
 # coding: utf-8
-" "
 require 'nokogiri'
 require 'open-uri'
 require "csv"
@@ -26,9 +25,9 @@ def getItems(liveId, liveName)
   html = Nokogiri::HTML(open("http://pripara.jp/item/" + liveId + ".html"))
   itemsNode = html.css(".itemDateBlock")
   items = itemsNode.map do |item|
-    itemId = " "
+    itemId = ""
     if item.css(".itemName span").children.length == 1
-      itemId = trimStar(item.css(".itemName span").children[0].text)
+      itemId = toHalf(trimStar(item.css(".itemName span").children[0].text))
     end
     itemName = item.css(".itemName h2").children.drop(2).map { |element| element.text }.join()
     thumbnailUrl = crateThumbnailUrl(item.css(".itemimg > img").first["src"])
@@ -142,6 +141,10 @@ def determineBrand(imgSrc)
   else
     return "なし"
   end
+end
+
+def toHalf(str)
+  str.tr('０-９ａ-ｚＡ-Ｚ', '0-9a-zA-Z')
 end
 
 main()
