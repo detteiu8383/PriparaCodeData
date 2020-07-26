@@ -69,6 +69,8 @@ def completeSecretCode(codeData)
     return ["2015promotion","2015シリーズプロモーション","C-086","プチデビスイートトップス","http://pripara.jp/item/image/secret.png","トップス","クール","HolicTrickClassic","SR",720,"不明"]
   when "C-060"
     return ["2015promotion","2015シリーズプロモーション","C-060","ゴージャスムーンワンピ","http://pripara.jp/item/image/secret.png","ワンピ","クール","HolicTrick","R",1100,"不明"]
+  when "C-268"
+    return ["2017promotion","2017シリーズプロモーション","C-268","フェアリープリンセスそらいろトップス","http://pripara.jp/item/image/secret.png","トップス","ラブリー","TwinkleRibbon","SR","1030","水色"]
   else
     return codeData
   end
