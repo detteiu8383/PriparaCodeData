@@ -67,7 +67,7 @@ def completeSecretCode(codeData)
     return ["2015_4th","まいにちプリパラ2015 4thライブ（10月）","H-MR-004","ミステリーBMサイリウムヘアアクセ","http://pripara.jp/item/image/secret.png","ワンピース","クール","BabyMonster",nil,nil,"不明"]
   when "C-086"
     return ["2015promotion","2015シリーズプロモーション","C-086","プチデビスイートトップス","http://pripara.jp/item/image/secret.png","トップス","クール","HolicTrickClassic","SR",720,"不明"]
-  when "C-060,"
+  when "C-060"
     return ["2015promotion","2015シリーズプロモーション","C-060","ゴージャスムーンワンピ","http://pripara.jp/item/image/secret.png","ワンピ","クール","HolicTrick","R",1100,"不明"]
   else
     return codeData
